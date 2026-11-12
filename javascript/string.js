@@ -27,3 +27,23 @@ console.log( '$' + ((((2090 + 750)*.1)/100)) )
 /* if you want to calulate items */
 
 console.log( 'item (' + (1+1) + '):$' + ((((2090 + 750)*.1)/100)) )
+
+/* 
+string can use '' or  ""
+you use both according to the 
+use case
+like ' i'm learning javascript  '
+if you use '' only it show error  you can also use escape character 
+\'  or \" this tell computer to ignore character
+and \n this creat a next line 
+
+*/
+
+
+console.log( " i'm learning javascript  " )
+
+
+console.log( ' i\'m learning javascript  ' )
+
+
+console.log( `item (${1+1}): ${(2095+750)/100}`) 
