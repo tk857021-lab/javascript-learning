@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>
+  
+  </title>
+   <style>
+ 
+
+   </style>
+ </head>
+  <body>
+   <script>
+    function greet(name){ 
+      if (name===undefined){
+       console.log('hi there!')
+      }else{
+        console.log(`hello ${name}`);
+      }
+      
+    }
+    greet();
+    greet('tushar');
+
+    function convertFahrenheth(celsius){
+      console.log((celsius * 9/5)+32);
+    }
+    
+    function convertCelsius(fahrenheth){
+      console.log((fahrenheth-32)*5/9)
+    }
+
+
+    function converttemperature(degree,unit){
+      if (unit === 'C'){
+      
+      console.log((degree-32)*5/9)
+      }else if (unit=== 'F'){
+        console.log((degree * 9/5)+32);
+      }
+    }
+   converttemperature(25 ,'F')
+   converttemperature(86, 'C')
+   convertFahrenheth(25);
+   convertCelsius(86);
+
+
+   function convertLength(length,from,to){  
+    if (from==='miles' && to === 'km'){
+      console.log((length*1.6)*1);
+
+    }else if (from==='km' && to === 'miles'){
+      console.log((length*1)*1.6);
+
+    }else if (from==='km' && to === 'km'){
+      console.log((length*1)*1);
+
+    }else if (from==='miles' && to === 'miles'){
+      console.log((length*1)*1);
+    }else if (from==='miles' && to === 'ft'){
+      console.log((length*1)*26400);
+    }else if (from==='km' && to === 'ft'){
+      console.log((length*1)*3281); 
+    }else if (from==='ft' && to === 'miles'){
+      console.log((length*26400)*1);
+    }else if (from==='ft' && to === 'km'){
+      console.log((length*3281)*1);
+    }else if(!from=== 'ft' || 'miles' || 'km' && to === 'miles' ||  'km' || 'ft'){
+      console.log('invalid coverter')
+    }
+
+  }
+   convertLength(50,'miles','km');
+   convertLength(32,'km','miles');
+   convertLength(50,'km','km');
+   convertLength(5,'miles','ft');
+   convertLength(5,'km','ft');
+   convertLength(5,'ft','km');
+   convertLength(5,'lbs','lbs')
+
+
+
+   </script>
+  </body>
+</html>

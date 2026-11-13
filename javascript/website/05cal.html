@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>
-        cart
+        calculater
     </title>
   <style>
       
@@ -10,44 +10,29 @@
   </head>
   <body>
     <P>
-      <button onclick="caluation += '1';
-       console.log(caluation);">1</button>
-      <button onclick="caluation += '2';
-       console.log(caluation);">2</button>
-      <button onclick="caluation += '3';
-       console.log(caluation);">3</button>
-      <button onclick="caluation += ' + ';
-       console.log(caluation);">+</button>
+      <button onclick="num('1');">1</button>
+      <button onclick="num('2');">2</button>
+      <button onclick="num('3');">3</button>
+      <button onclick="op(' * ');">*</button>
     </P>
     <p>
-      <button onclick="caluation += '4';
-       console.log(caluation);">4</button>
-      <button onclick="caluation += '5';
-       console.log(caluation);">5</button>
-      <button onclick="caluation += '6';
-       console.log(caluation);">6</button>
-      <button onclick="caluation += ' - ';
-       console.log(caluation);">-</button>
+      <button onclick="num('4');">4</button>
+      <button onclick="num('5');">5</button>
+      <button onclick="num('6');">6</button>
+      <button onclick="op(' - ');">-</button>
     </p>
     <p>
-      <button onclick="caluation += '7';
-       console.log(caluation);">1</button>
-      <button onclick="caluation += '8';
-       console.log(caluation);">2</button>
-      <button onclick="caluation += '9';
-       console.log(caluation);">3</button>
-      <button onclick="caluation += ' * ';
-       console.log(caluation);">*</button>
+      <button onclick="num('7');">7</button>
+      <button onclick="num('8');">8</button>
+      <button onclick="num('9');">9</button>
+      <button onclick="op(' * ');">*</button>
     </p>
     <p>
-      <button onclick="caluation += '0';
-       console.log(caluation);">0</button>
-      <button onclick="caluation += '.';
-       console.log(caluation);">.</button>
-      <button onclick="caluation = eval(caluation);;
+      <button onclick="num('0');">0</button>
+      <button onclick="num('.');">.</button>
+      <button onclick="caluation = eval(caluation);
        console.log(caluation);">=</button>
-      <button onclick="caluation += ' / ';
-       console.log(caluation);">+</button>
+      <button onclick="op(' + ');">+</button>
     </p>
     <p>
       <button onclick="caluation = '';
@@ -55,6 +40,15 @@
     </p>
     <script>
       let caluation = '';
+
+      function num(number){
+       caluation += number;
+       console.log(caluation);
+      }
+      function  op(oprater){
+        caluation +=  oprater 
+        console.log(caluation);
+      }
     </script>
   </body>    
 </html>
