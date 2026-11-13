@@ -1,0 +1,32 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+  <title>
+   coin game
+  </title>
+  <style>
+ 
+
+  </style>
+  </head>
+  <body>
+  <script>
+    const coin= Math.random();
+    console.log(coin)
+    if ( coin < 0.5){
+      result='head'
+      
+    } else {
+     result='tail'
+    }
+   console.log(result)
+    
+   let guess = 'tail'
+   if (result === guess){
+    console.log('win')
+   }else {
+    console.log('loss')
+   }
+  </script>
+  </body>
+  </html>
