@@ -2,7 +2,7 @@
   <html lang="en">
   <head>
   <title>
-   fuction   
+   object    
   </title>
   <style>
  
@@ -11,19 +11,21 @@
   </head>
   <body>
   <script>
-  function function1(){
-    console.log('hello');
-    console.log(2 + 2);
-  }
-  function1();
+    const product={
+      name :'show',
+      price: 4.5
+    }
+    console.log(product);
+    console.log(product.name);
+    console.log(product.price);
 
-  function calculateTax(cost , taxPerCent = .1){
-    console.log(cost * taxPerCent);
-  }
-
-  calculateTax(2000 , 0.9);
-  calculateTax(9909,.18);
-  calculateTax(5000);
+    product.name= 'socks';
+    console.log(product);
+    product.newProperty='cat';
+    console.log(product);
+    
+    delete product.newProperty;
+    console.log(product);
   </script>
   </body>
   </html>
