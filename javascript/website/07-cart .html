@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>cart</title>
+    <style></style>
+  </head>
+  <body>
+    <p>cart quantity</p>
+
+    <button onclick="console.log(`cart quantity: ${cartquantity}`)">
+      cart quantity
+    </button>
+
+    <button onclick="updateCart('+', 1)">add to cart</button>
+
+    <button onclick="updateCart('+', 2)">+2</button>
+
+    <button onclick="updateCart('+', 3)">+3</button>
+
+    <button onclick="updateCart('+', 4)">+4</button>
+
+    <button onclick="updateCart('+', 5)">+5</button>
+
+    <button onclick="updateCart('-', 1)">delete cart</button>
+
+    <button onclick="updateCart('-', 2)">-2</button>
+
+    <button onclick="updateCart('-', 3)">-3</button>
+
+    <button onclick="updateCart('-', 4)">-4</button>
+
+    <button onclick="updateCart('-', 5)">-5</button>
+    
+
+    <button
+      onclick="
+        cartquantity = 0;
+        console.log('cart is reset');
+        console.log(`cart quantity: ${cartquantity}`);
+      "
+    >
+      reset
+    </button>
+
+    <script>
+      let cartquantity = 0;
+      function updateCart(unit, num) {
+        if (unit === "+") {
+          cartquantity += num;
+          console.log(`cart quantity: ${cartquantity}`);
+          if (cartquantity >= 10) {
+            cartquantity = 10;
+            alert("cart is full");
+            console.log(`cart quantity: ${cartquantity}`);
+          }
+        } else if (unit === "-") {
+          cartquantity -= num;
+          console.log(`cart quantity: ${cartquantity}`);
+          if (cartquantity <= 0) {
+            cartquantity = 0;
+            alert("cart is empty");
+            console.log(`cart quantity: ${cartquantity}`);
+          }
+        }else if (!unit==='-'||'+'){
+          alert('you can just update or delete cart')
+        }
+      }
+    </script>
+  </body>
+</html>
