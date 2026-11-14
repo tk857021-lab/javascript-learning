@@ -28,7 +28,7 @@
     delete product.newProperty;
     console.log(product);
     */
-
+   /*
     const product2 = {
       name: 'shirt',
       'delivery-time': '1 day',
@@ -53,6 +53,58 @@
     const jsonString = JSON.stringify(product2)
 
     console.log(JSON.parse(jsonString));
+
+    */
+
+
+    /*
+
+    console.log('hello'.length);
+    console.log('hello'.toUpperCase());
+    const object1={
+      message:'hello'
+    }
+    const object2 = object1;
+
+    object1.message='good job!';
+    console.log(object1);
+
+    */
+
+
+
+    const product= {
+      name: 'bakitboll',
+      price: 2095,
+      'delivery-time': '3 day'
+    }
+
+    console.log(product)
+
+    product.price= 799;
+    console.log(product);
+    product['delivery-time'];
+    console.log(product['delivery-time']);
+
+   show ={
+    name: 'show',
+    price:8679
+   }
+
+   sock ={
+    name: 'sock',
+    price: 890
+   }
+
+    function compare(product1 , product2){
+     if (product1 > product2){
+      console.log(`product 1 is big`)
+     }else if (product1< product2){
+      console.log(`product 2 is big`)
+     }
+    }
+    compare('show','sock');
+    
   </script>
   </body>
   </html>
