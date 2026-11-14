@@ -11,6 +11,7 @@
   </head>
   <body>
   <script>
+    /*
     const product={
       name :'show',
       price: 4.5
@@ -26,6 +27,32 @@
     
     delete product.newProperty;
     console.log(product);
+    */
+
+    const product2 = {
+      name: 'shirt',
+      'delivery-time': '1 day',
+      rating: {
+       stars: 4.5,
+       order: 87,
+      },
+      fun: function  function1(){
+        console.log('thid is a fuction in object');
+        
+      }
+    };
+
+    console.log(product2);
+    console.log(product2.name);
+    console.log(product2['name']);
+    console.log(product2['delivery-time']);
+    console.log(product2.rating.order);
+    product2.fun();
+
+    console.log(JSON.stringify(product2));
+    const jsonString = JSON.stringify(product2)
+
+    console.log(JSON.parse(jsonString));
   </script>
   </body>
   </html>
