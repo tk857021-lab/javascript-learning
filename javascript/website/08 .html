@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>coin game</title>
+    <style></style>
+  </head>
+  <body>
+    <button onclick="playgame('head')">head</button>
+    <button onclick="playgame('tail')">tails</button>
+    <button
+      onclick="
+        score.wins = 0;
+        score.losses = 0;
+        localStorage.removeItem('score');
+        alert(`wins: ${score.wins} losses: ${score.losses}`);
+      "
+    >
+      restart
+    </button>
+    <script>
+      let score = JSON.parse(localStorage.getItem("score")) || {
+        wins: 0,
+        losses: 0,
+      };
+
+      function playgame(guess) {
+        const computerMove = pickComputer();
+
+        let result = "";
+        if (guess === computerMove) {
+          result = "you win";
+        } else  {
+          result = "you loss";
+        } ;
+
+          if (result === "you win") {
+            score.wins ++;
+          } else if (result === "you loss") {
+            score.losses ++;
+          };
+        
+
+        localStorage.setItem("score", JSON.stringify(score));
+
+        alert(
+          `You picked ${guess}. Computer picked ${computerMove}. ${result}
+          wins: ${score.wins} losses: ${score.losses}`
+        );
+      }
+
+
+      function pickComputer() {
+        let computerMove = Math.random();
+
+        console.log(computerMove);
+        if (computerMove < 0.5) {
+          computerMove = "head";
+        } else if (computerMove > 0.5){
+          computerMove = "tail";
+        }
+
+        return computerMove;
+      }
+    </script>
+  </body>
+</html>

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>
-        calculater
+        calculater05
     </title>
   <style>
       
@@ -30,25 +30,28 @@
     <p>
       <button onclick="num('0');">0</button>
       <button onclick="num('.');">.</button>
-      <button onclick="caluation = eval(caluation);
-       console.log(caluation);">=</button>
+      <button onclick="caluation = String(eval(caluation)); console.log(caluation); save.caluation.save();">=</button>
       <button onclick="op(' + ');">+</button>
     </p>
     <p>
-      <button onclick="caluation = '';
-       console.log('cleared');">clear</button>
+      <button onclick="caluation = ''; console.log('cleared'); saveCalculation();">clear</button>
     </p>
     <script>
-      let caluation = '';
-
+      let caluation = JSON.parse(localStorage.getItem('caluation')) || '';
+       
+      
       function num(number){
        caluation += number;
        console.log(caluation);
+       saveCalculation();
       }
       function  op(oprater){
         caluation +=  oprater 
         console.log(caluation);
+        saveCalculation();
       }
+
+       localStorage.setItem(caluation,JSON.stringify(caluation));
     </script>
   </body>    
 </html>

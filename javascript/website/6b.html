@@ -10,22 +10,35 @@
   </style>
   </head>
   <body>
+
+    <button onclick="playgame();">head</button>
+    <button onclick="playgame();">tails</button>
   <script>
-    const coin= Math.random();
-    console.log(coin)
-    if ( coin < 0.5){
-      result='head'
+   
+   function playgame(guess){
+    
+    
+    const computerMove= Math.random();
+
+    console.log(computerMove)
+    if ( computerMove < 0.5){
+      computerMove='head'
       
     } else {
-     result='tail'
+     computerMove='tail'
     }
-   console.log(result)
+   console.log(computerMove)
+   
+   
+   
     
-   let guess = 'tail'
    if (result === guess){
     console.log('win')
    }else {
     console.log('loss')
+   }
+   alert(`guess`)
+
    }
   </script>
   </body>
