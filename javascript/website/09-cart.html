@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>cart</title>
+    <style></style>
+  </head>
+  <body>
+    <p>cart quantity</p>
+
+    <button onclick="console.log(`cart quantity: ${cartquantity}`) ,updataCartCount();">
+      cart quantity
+    </button>
+
+    <button onclick="updateCart('+', 1) ,updataCartCount();">add to cart</button>
+
+    <button onclick="updateCart('+', 2) ,updataCartCount();">+2</button>
+
+    <button onclick="updateCart('+', 3) ,updataCartCount();">+3</button>
+
+    <button onclick="updateCart('+', 4) ,updataCartCount();">+4</button>
+
+    <button onclick="updateCart('+', 5) ,updataCartCount();">+5</button>
+
+    <button onclick="updateCart('-', 1) ,updataCartCount();">delete cart</button>
+
+    <button onclick="updateCart('-', 2) ,updataCartCount();">-2</button>
+
+    <button onclick="updateCart('-', 3) ,updataCartCount();">-3</button>
+
+    <button onclick="updateCart('-', 4) ,updataCartCount();">-4</button>
+
+    <button onclick="updateCart('-', 5) ,updataCartCount();">-5</button>
+
+    
+
+    <button
+      onclick="
+        cartquantity = 0;
+        console.log('cart is reset');
+        console.log(`cart quantity: ${cartquantity}`);
+        updataCartCount();
+      "
+    >
+      reset
+    </button>
+
+    <p class="js-cart-count"></p>
+
+    <script>
+      let cartquantity = 0;
+        
+      function updataCartCount(){
+       const cartCount = document.querySelector('.js-cart-count')
+       .innerHTML = `Cart Quantity: ${cartquantity}`;
+        
+       
+      }
+
+      function updateCart(unit, num) {
+        if (unit === "+") {
+          cartquantity += num;
+          console.log(`cart quantity: ${cartquantity}`);
+          if (cartquantity >= 10) {
+            cartquantity = 10;
+            alert("cart is full");
+            console.log(`cart quantity: ${cartquantity}`);
+          }
+        } else if (unit === "-") {
+          cartquantity -= num;
+          console.log(`cart quantity: ${cartquantity}`);
+          if (cartquantity <= 0) {
+            cartquantity = 0;
+            alert("cart is empty");
+            console.log(`cart quantity: ${cartquantity}`);
+          }
+        }else if (!unit==='-'||'+'){
+          alert('you can just update or delete cart')
+        }
+      }
+    </script>
+  </body>
+</html>

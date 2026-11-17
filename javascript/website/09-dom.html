@@ -25,9 +25,46 @@
         buttonElement9a.innerHTML = '9a';
        }; " class="js-9a" >9a</button>
 
+    <input placeholder="name" onkeydown="handleKeyName(event)" 
+    class="js-name-input">
+    <button onclick="yourName();" >submit</button>
+    <p class="js-what-name"></p>
+
+
+
+    <input placeholder="name" onkeyup="whatKey(event.key)" 
+    class="js-key-input">
+    <p class="js-what-key"></p>
+
+
     <script>
+
+
+     function whatKey(event){
+      const inputKey= document.querySelector('.js-key-input');
+      let outputkey = inputKey.value;
+      
+      document.querySelector(".js-what-key").innerHTML = outputkey;
+       
+     }
+
      
-    
+      
+     function yourName(){
+      const inputElementName = document.querySelector('.js-name-input');
+      let showName = inputElementName.value;
+  
+      document.querySelector(".js-what-name").innerHTML = `your name is: ${showName}`;
+     }
+
+
+      
+
+     function handleKeyName(event) {
+        if (event.key === "Enter") {
+          yourName();
+        }
+      }
 
 
       String(25);
@@ -41,12 +78,13 @@
       function handleKeyCost(event) {
         if (event.key === "Enter") {
           calculateTotal();
+
         }
       }
 
       function calculateTotal() {
         const inputElement = document.querySelector(".js-cost-input");
-        let cost = Number(inputElement.value);
+        let cost = Math.round(Number(inputElement.value));
         console.log(cost);
         console.log(typeof cost);
 
