@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Calculator</title>
+</head>
+<body>
+<p class="js-cal-box"></p>
+<p>
+  <button onclick="num('1') , updateCalculation();">1</button>
+  <button onclick="num('2') , updateCalculation();">2</button>
+  <button onclick="num('3') , updateCalculation();">3</button>
+  <button onclick="op(' + ') , updateCalculation();">+</button>
+</p>
+<p>
+  <button onclick="num('4') , updateCalculation();">4</button>
+  <button onclick="num('5') , updateCalculation();">5</button>
+  <button onclick="num('6') , updateCalculation();">6</button>
+  <button onclick="op(' - ') , updateCalculation();">-</button>
+</p>
+<p>
+  <button onclick="num('7') , updateCalculation();">7</button>
+  <button onclick="num('8') , updateCalculation();">8</button>
+  <button onclick="num('9') , updateCalculation();">9</button>
+  <button onclick="op(' * ') , updateCalculation();">*</button>
+</p>
+<p>
+  <button onclick="num('0') , updateCalculation();">0</button>
+  <button onclick="num('.') , updateCalculation();">.</button>
+  <button onclick="equals() , updateCalculation();">=</button>
+  <button onclick="op(' / ') , updateCalculation();">/</button>
+</p>
+<p>
+  <button onclick="clearAll() ,updateCalculation();">clear</button>
+</p>
+
+<script>
+let calculation = localStorage.getItem('calc') || '';
+
+function updateCalculation(){
+       const cal = document.querySelector('.js-cal-box')
+       .innerHTML = `${calculation}`;
+       
+      }
+
+function save() {
+  localStorage.setItem('calc', calculation);
+}
+
+function num(n) {
+  calculation += n;
+  save();
+  console.log(calculation);
+}
+
+function op(o) {
+  calculation += o;
+  save();
+  console.log(calculation);
+}
+
+function equals() {
+  calculation = String(eval(calculation));
+  save();
+  console.log(calculation);
+}
+
+function clearAll() {
+  calculation = '';
+  save();
+  console.log('cleared');
+}
+</script>
+</body>
+</html>
