@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>dom project</title>
+    <style></style>
+  </head>
+  <body>
+    <p>subcribe youtube button</p>
+    <button onclick="Subscribe()" class="js-subscribe-button">Subscribe</button>
+    <p>Amazon Shipping calculater</p>
+    
+    <input
+      placeholder="cost of order"
+      class="js-cost-input"
+      onkeydown="handleKeyCost(event)"
+    />
+    <button onclick="calculateTotal()">calculate</button>
+    <p class="js-total-cost"></p>
+
+    <button onclick="
+     const buttonElement9a = document.querySelector('.js-9a');
+       if (buttonElement9a.innerHTML=== '9a' ){
+        buttonElement9a.innerHTML='9b';
+       }else {
+        buttonElement9a.innerHTML = '9a';
+       }; " class="js-9a" >9a</button>
+
+    <script>
+     
+    
+
+
+      String(25);
+      console.log("20" - 5);
+      console.log("20" + 5);
+
+      window.document;
+      window.console.log("window");
+      window.alert;
+
+      function handleKeyCost(event) {
+        if (event.key === "Enter") {
+          calculateTotal();
+        }
+      }
+
+      function calculateTotal() {
+        const inputElement = document.querySelector(".js-cost-input");
+        let cost = Number(inputElement.value);
+        console.log(cost);
+        console.log(typeof cost);
+
+        if (cost < 40) {
+          cost = cost + 10;
+          console.log(cost);
+        }
+
+        document.querySelector(".js-total-cost").innerHTML = `$${cost}`;
+      }
+
+      function Subscribe() {
+        const buttonElement = document.querySelector(".js-subscribe-button");
+        if (buttonElement.innerHTML === "Subscribe") {
+          buttonElement.innerHTML = "Subscribed";
+        } else {
+          buttonElement.innerHTML = "Subscribe";
+        }
+      }
+
+
+       
+    </script>
+  </body>
+</html>
