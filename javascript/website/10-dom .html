@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>dom project</title>
+    <style>
+      .css-sub-button{
+        border: none;
+        background-color: black;
+        color: white;
+        border-radius: 25px;
+        padding: 10px;
+        cursor: pointer;
+        margin-bottom: 45px;
+      }
+      .is-subscribed{
+       background-color: aliceblue;
+       color: black;
+      }
+     body{
+      font-family: Arial,  sans-serif;
+     }
+     .css-input{
+      padding: 10px;
+      
+     }
+
+     .css-calculate{
+      padding: 12px;
+      cursor: pointer;
+      background-color: rgb(31, 104, 31); 
+      color: white; 
+      border: none;
+      font-weight: 500;
+     }
+    </style>
+  </head>
+  <body>
+    <p>subcribe youtube button</p>
+    <button onclick="Subscribe()" class="js-subscribe-button css-sub-button">Subscribe</button>
+    <p>Amazon Shipping calculater</p>
+    <p>Order over 40 is free shipping</p>
+    <p>Order under 40 is 10$ for shipping</p>
+    <input
+      placeholder="cost of order"
+      class="js-cost-input css-input"
+      onkeydown="handleKeyCost(event)"
+    />
+    <button onclick="calculateTotal()" class="css-calculate">calculate</button>
+    <p class="js-total-cost"></p>
+
+    <button onclick="
+     const buttonElement9a = document.querySelector('.js-9a');
+       if (buttonElement9a.innerHTML=== '9a' ){
+        buttonElement9a.innerHTML='9b';
+       }else {
+        buttonElement9a.innerHTML = '9a';
+       }; " class="js-9a" >9a</button>
+
+    <input placeholder="name" onkeydown="handleKeyName(event)" 
+    class="js-name-input">
+    <button onclick="yourName();" >submit</button>
+    <p class="js-what-name"></p>
+
+
+
+    <input placeholder="name" onkeyup="whatKey(event.key)" 
+    class="js-key-input">
+    <p class="js-what-key"></p>
+
+
+    <script>
+
+
+     function whatKey(event){
+      const inputKey= document.querySelector('.js-key-input');
+      let outputkey = inputKey.value;
+      
+      document.querySelector(".js-what-key").innerHTML = outputkey;
+       
+     }
+
+     
+      
+     function yourName(){
+      const inputElementName = document.querySelector('.js-name-input');
+      let showName = inputElementName.value;
+  
+      document.querySelector(".js-what-name").innerHTML = `your name is: ${showName}`;
+     }
+
+
+      
+
+     function handleKeyName(event) {
+        if (event.key === "Enter") {
+          yourName();
+        }
+      }
+
+
+      String(25);
+      console.log("20" - 5);
+      console.log("20" + 5);
+
+      window.document;
+      window.console.log("window");
+      window.alert;
+
+      function handleKeyCost(event) {
+        if (event.key === "Enter") {
+          calculateTotal();
+
+        }
+      }
+
+      function calculateTotal() {
+        const inputElement = document.querySelector(".js-cost-input");
+        let cost = Math.round(Number(inputElement.value));
+        console.log(cost);
+        console.log(typeof cost);
+
+        if (cost < 40) {
+          cost = cost + 10;
+          console.log(cost);
+        }
+
+        document.querySelector(".js-total-cost").innerHTML = `$${cost}`;
+      }
+
+      function Subscribe() {
+        const buttonElement = document.querySelector(".js-subscribe-button");
+        if (buttonElement.innerHTML === "Subscribe") {
+          buttonElement.innerHTML = "Subscribed";
+          buttonElement.classList.add('is-subscribed');
+        } else {
+          buttonElement.innerHTML = "Subscribe";
+          buttonElement.classList.remove('is-subscribed');
+        }
+      }
+
+
+       
+    </script>
+  </body>
+</html>
