@@ -2,17 +2,59 @@
 <html lang="en">
   <head>
     <title>rock paper scissors</title>
-    <style></style>
+    <style>
+      body{
+        background-color: black;
+      }
+      .title-rps{
+        color: white;
+      }
+      .js-score , .js-pick{
+        color: white;
+      }
+
+      .move-icons{
+        height: 50px; 
+      }
+
+      .move-button{
+        border-radius: 60px;
+        background-color: transparent;
+        height: 120px;
+        width: 120px;
+        cursor: pointer;
+        border: 3px solid white;
+        margin-left: 10px;
+      }
+
+      .css-result{
+        font-size: 25px;
+        font-weight: bold;
+        margin-top: 40px;
+      }
+
+      .reset-score-button{
+        border: none;
+        padding: 10px;
+        margin-top: 25px;
+      }
+    </style>
   </head>
   <body>
-    <p>rock paper scissors</p>
-    <button onclick="playGame('rock')">rock</button>
+    <p class="title-rps">rock paper scissors</p>
+    <button onclick="playGame('rock')" class="move-button">
+      <img src="rock-emoji.png" alt="rock" class="move-icons">
+    </button>
 
-    <button onclick="playGame('paper')">paper</button>
+    <button onclick="playGame('paper')" class="move-button">
+      <img src="paper-emoji.png" alt="papar" class="move-icons">
+    </button>
 
-    <button onclick="playGame('scissors')">scissors</button>
+    <button onclick="playGame('scissors')" class="move-button">
+      <img src="scissors-emoji.png" alt="scissors" class="move-icons">
+    </button>
 
-    <p class="js-result"></p>
+    <p class="js-result css-result"></p>
     <p class="js-pick"></p>
     <p class="js-score"></p>
 
@@ -26,9 +68,10 @@
         alert(
           `wins: ${score.wins} losses: ${score.losses} ties: ${score.ties}`,
         );
-      "
+      " 
+      class="reset-score-button"
     >
-      restart
+      restart score
     </button>
     <script>
       let score = JSON.parse(localStorage.getItem("score"))
@@ -95,7 +138,10 @@
 
         
         document.querySelector('.js-pick')
-        .innerHTML = `You picked ${playerMove}. Computer picked ${computerMove}. ${result}`;
+        .innerHTML = `You picked 
+           <img src="${playerMove}-emoji.png" class="move-icons"> 
+           <img src="${computerMove}-emoji.png" class="move-icons">
+           Computer picked`;
 
         alert(
           `You picked ${playerMove}. Computer picked ${computerMove}. ${result}
