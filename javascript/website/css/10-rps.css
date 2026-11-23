@@ -1,0 +1,36 @@
+      body{
+        background-color: black;
+      }
+      .title-rps{
+        color: white;
+      }
+      .js-score , .js-pick{
+        color: white;
+      }
+
+      .move-icons{
+        height: 50px; 
+      }
+
+      .move-button{
+        border-radius: 60px;
+        background-color: transparent;
+        height: 120px;
+        width: 120px;
+        cursor: pointer;
+        border: 3px solid white;
+        margin-left: 10px;
+      }
+
+      .css-result{
+        font-size: 25px;
+        font-weight: bold;
+        margin-top: 40px;
+        color: white;
+      }
+
+      .reset-score-button{
+        border: none;
+        padding: 10px;
+        margin-top: 25px;
+      }
