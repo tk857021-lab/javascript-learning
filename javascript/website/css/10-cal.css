@@ -1,6 +1,44 @@
 .oprater{
   border: none;
   border-radius: 50%;
-  background-color: gold;
+  background-color: rgb(255, 210, 0);
   color: white;
+  padding: 5px;
+  height: 25px;
+  width: 25px;
+  font-size: 8px;
+}
+
+body{
+  background-color: black;
+}
+
+.num{
+    border: none;
+    border-radius: 50%;
+    background-color: rgb(51, 49, 49);
+    color: white;
+    padding: 5px;
+    height: 25px;
+    width: 25px;
+    font-size: 8px;
+}
+
+.cal-box-css{
+  color:white;
+  padding: 5px;
+  height: 25px;
+  font-size: 15px;
+}
+
+.clear{
+  border: none;
+  border-radius: 50%;
+  background-color: rgb(255, 210, 0);
+  color: white;
+  height: 25px;
+  width: 25px;
+  font-size: 8px;
+  padding: 5px;
+  
 }
