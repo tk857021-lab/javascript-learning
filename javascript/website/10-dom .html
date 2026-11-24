@@ -32,6 +32,10 @@
       border: none;
       font-weight: 500;
      }
+
+     .total-cost-css{
+      color: red;
+     }
     </style>
   </head>
   <body>
@@ -114,19 +118,31 @@
       }
 
       function calculateTotal() {
-        const inputElement = document.querySelector(".js-cost-input");
+        let inputElement = document.querySelector(".js-cost-input");
+        
+        let costElement = document.querySelector(".js-total-cost");
         let cost = Math.round(Number(inputElement.value));
         console.log(cost);
         console.log(typeof cost);
 
-        if (cost < 40) {
-          cost = cost + 10;
-          console.log(cost);
-        }else if (cost < 0){
-         document.querySelector(".js-total-cost").innerHTML = `Error: coat cannot be less then $0 `;
-        }
+        
+         if (cost < 0  ){
 
-        document.querySelector(".js-total-cost").innerHTML = `$${cost}`;
+          costElement.innerHTML = "Error: coat cannot be less then $0";
+          costElement.classList.add('total-cost-css');
+          
+        }else if (cost < 40) {
+          cost = cost + 10;
+          console.log(cost);}
+         
+        document.querySelector(".js-total-cost").innerHTML = `$${cost}`
+        if (cost < 0  ){
+
+          costElement.innerHTML = "Error: cost cannot be less then $0";
+          costElement.classList.add('total-cost-css');
+          ;}else{
+            costElement.classList.remove('total-cost-css');
+          }
 
          
       }
