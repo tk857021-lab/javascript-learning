@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>
+
+</title>
+<style>
+
+button{
+  border: none;
+  background-color: white;
+  color: black;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.buttonOnClike-css{
+  background-color: black;
+  color: white;
+}
+
+</style>
+</head>
+<body>
+
+  <button onclick="onbutton(this)" class="js-buttonOnClike ">Gaming</button>
+  <button onclick="onbutton(this)" class="js-buttonOnClike ">Music</button>
+  <button onclick="onbutton(this)" class="js-buttonOnClike ">Tech</button>
+<script>
+ 
+
+function onbutton(buttonElement){
+  
+  const prireButton=document.querySelector('.buttonOnClike-css')
+
+   if (prireButton && prireButton !== buttonElement){
+    prireButton.classList.remove('buttonOnClike-css');
+   }
+
+    buttonElement.classList.toggle('buttonOnClike-css'); 
+}
+
+
+</script>
+</body>
+</html>

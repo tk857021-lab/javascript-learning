@@ -122,9 +122,13 @@
         if (cost < 40) {
           cost = cost + 10;
           console.log(cost);
+        }else if (cost < 0){
+         document.querySelector(".js-total-cost").innerHTML = `Error: coat cannot be less then $0 `;
         }
 
         document.querySelector(".js-total-cost").innerHTML = `$${cost}`;
+
+         
       }
 
       function Subscribe() {
