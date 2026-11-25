@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>
+
+</title>
+<style>
+
+</style>
+</head>
+<body>
+<script>
+
+ const array=[10,20,30];
+ console.log(array)
+ array.push(99);
+ console.log(array)
+
+
+ function getLastArrey(arr){ 
+
+ const lastIndex=arr.length-1;
+ return arr[lastIndex]; 
+
+}
+
+  
+ 
+ console.log(getLastArrey([1,20,22,24,5]));
+ console.log(getLastArrey(['hi','no','goodbye']));
+
+
+  function arreySwep(arr){ 
+
+ 
+ let SwepIndex=[arr[0], arr[arr.length - 1]] = [arr[arr.length - 1], arr[0]];
+ return arr; 
+
+}
+console.log(arreySwep([1,20,22,24,5]));
+console.log(arreySwep(['hi','no','goodbye']));
+
+/*
+let i=1;
+while(i <=10){
+  console.log(i);
+ i++;
+}
+ */
+
+ 
+let i=5;
+while(i >=0){
+  console.log(i);
+ i--;
+}
+
+ 
+
+</script>
+</body>
+</html>
