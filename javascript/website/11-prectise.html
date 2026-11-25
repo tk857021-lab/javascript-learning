@@ -174,6 +174,44 @@ minMax([3,3])
 minMax([3,-1,2,4])
 minMax([3,5,-9,2]) 
 
+function countWords(words) {
+  let count = {}; // Use an object to store word: count pairs
+
+  for (let i = 0; i < words.length; i++) {
+    let currentWord = words[i]; // Grab the individual word
+    
+    if (count[currentWord]) {
+      count[currentWord]++; // Add 1 if it already exists
+    } else {
+      count[currentWord] = 1; // Set to 1 if it's the first time seeing it
+    }
+  }
+
+  console.log(count); // Log once after the loop finishes
+}
+
+countWords(['apple', 'apple', 'banana', 'banana', 'banana']);
+// Output: { apple: 2, banana: 3 }
+
+
+function countWord(word){
+  let count ={};
+  for (let i=0;i<word.length;i++){
+
+  let currentWord = word[i]; 
+
+  if (count[currentWord]){
+
+    count[currentWord]++; 
+  }else {
+    count[currentWord] = 1;
+  }
+  console.log(count)
+ }
+}
+countWord(['apple','apple','banana','banana','banana']);
+
+
 
 </script>
 </body>
