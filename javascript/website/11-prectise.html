@@ -11,6 +11,9 @@
 <body>
 <script>
 
+  
+/*
+
  const array=[10,20,30];
  console.log(array)
  array.push(99);
@@ -40,7 +43,6 @@
 console.log(arreySwep([1,20,22,24,5]));
 console.log(arreySwep(['hi','no','goodbye']));
 
-/*
 let i=1;
 while(i <=10){
   console.log(i);
@@ -55,7 +57,7 @@ while(i >=0){
  i--;
 }
 
- */
+ 
 
 
  let total=[];
@@ -114,6 +116,63 @@ while(i >=0){
 
  }
 addArrye([5,6,7,8],[1,2,3,4]);
+
+
+
+
+  function countpositive(num){
+  let total=[];
+  
+ for(let i=0;i<num.length;i++){
+  if (num[i]>0){
+    total++ ;
+  }
+  
+  
+ }
+
+ console.log(total)
+
+ }
+
+ countpositive([-1,2,4,-5,3]);
+
+ */
+
+ 
+
+ function minMax(arr){
+  
+ let min=[0];
+ let max=[0];
+ for(let i=1;i<arr.length;i++){
+  if (arr[i] < min){
+    min = arr[i];
+  }
+
+  if (arr[i] > max){
+    max = arr[i];
+  }
+
+  if(min===max){
+    min = arr[i];
+    max = arr[i];
+  }
+
+if (min===null || max===null){
+  min = 'null';
+  max= 'null'
+}
+
+ }
+console.log("Min:", min); 
+console.log("Max:", max); 
+
+ }
+minMax([,]);
+minMax([3,3])
+minMax([3,-1,2,4])
+minMax([3,5,-9,2]) 
 
 
 </script>
