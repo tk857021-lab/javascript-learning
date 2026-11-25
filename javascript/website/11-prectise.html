@@ -46,7 +46,7 @@ while(i <=10){
   console.log(i);
  i++;
 }
- */
+ 
 
  
 let i=5;
@@ -55,7 +55,66 @@ while(i >=0){
  i--;
 }
 
- 
+ */
+
+
+ let total=[];
+ const arreys3= [1,2,3,4];
+ for(let i=0;i<arreys3.length;i++){
+  const arrey3 =arreys3[i]+1;
+  total.push(arrey3) ;
+ }
+ console.log(total);
+
+
+
+ function addone(arr){
+  let total=[];
+  
+ for(let i=0;i<arr.length;i++){
+  const arrs =arr[i]+1;
+  total.push(arrs) ;
+  
+ }
+
+ console.log(total)
+
+ }
+
+ addone([5,6,7,8]);
+ addone([1,2,3,4]);
+ addone([-1,-2,-3,99]);
+
+ function addnum(arr ,num){
+  let total=[];
+  
+ for(let i=0;i<arr.length;i++){
+  const arrs =arr[i]+num;
+  total.push(arrs) ;
+  
+ }
+
+ console.log(total)
+
+ }
+
+ addnum([5,6,7,8],2);
+ addnum([5,6,7,8],10);
+
+  function addArrye(arr1 ,arr2){
+  let total=[];
+  
+ for(let i=0;i<arr1.length;i++){
+  const arrs =arr1[i]+arr2[i];
+  total.push(arrs) ;
+  
+ }
+
+ console.log(total)
+
+ }
+addArrye([5,6,7,8],[1,2,3,4]);
+
 
 </script>
 </body>
